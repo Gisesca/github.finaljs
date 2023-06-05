@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Gisela Escalona</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="script.js"></script>
+
+
+  </head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md "navbar bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-Toggler">
+            <a class="navbar-brand" href="index.html">
+                <img src="img1/codoacodo.png" alt="logo codoacodo" width="150">
+            </a>
+          <div class="collapse navbar-collapse" id="navbarToggler">
+            <a class="navbar-brand" href="index.html">Conf Bs As</a>
+            <ul class="navbar-nav mc-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">La conferencia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Los oradores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">el lugar y la fecha</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Coviertete en orador</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-semibold texto-primario" href="comprar-tickets.html">Comprar tickets</a>
+                
+              </li>
+              
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+  </header>
+  <main>
+    <section class="formularioTicket" id="seccionTicket" style="display: block;">
+      <div id="containerDivsDEsct" class="container-dctos">
+          <div class="estudiante" style="border: 2px solid blue;">
+              <h4>Estudiante</h4>
+              <br>
+              <p>Tiene un descuento</p>
+              <h3 id="estudiante">80 %</h3>
+              <br>
+
+              <p><span>* presentar documentacion</span></p>
+          </div>
+          <div class="traine" style="border: 2px solid blue;">
+              <h4>Trainee</h4>
+              <br>
+              <p>Tiene un descuento</p>
+              <h3 id="trainee">50 %</h3>
+              <br>
+
+              <p><span>* presentar documentacion</span></p>
+          </div>
+          <div class="junior" style="border: 2px solid yellow;">
+              <h4>Junior</h4>
+              <br>
+              <p>Tiene un descuento</p>
+              <h3 id="junior">15 %</h3>
+              <br>
+
+
+              <p><span>* presentar documentacion</span></p>
+          </div>
+
+
+      </div>
+
+
+
+      <form action="" id="comprartktForm">
+          <h2 style="margin-top: 20px;">VENTA</h2>
+          <h2 id="valorTkc">Valor del ticket $ 200</h2>
+
+          <div class="datos-comprador">
+
+              <input class="datosContacto" type="text" name="nombre" id="nombre" placeholder="nombre">
+              <input class="datosContacto" type="text" name="apellido" id="apellido" placeholder="apellido">
+           <div class="email">  
+              <input class="datosContacto" type="email" name="email" id="email" placeholder="Email">
+            </div> 
+
+              <div class="contenedorTipo">
+                  <input type="number" name="cantidad" id="cantidad_tickets" placeholder="Cantidad">
+              <select name="categoria" id="category">
+
+                  <option class="option" value="estudiante">
+                      Estudiante
+                  </option>
+                  <option class="option" value="trainee">
+                      Trainee
+                  </option>
+                  <option class="option" value="junior">
+                      Junior
+                  </option>
+              </select>
+              </div>
+          </div>
+
+
+          <div id="resumenDeCompra" class="resumenCompra" style="display: none;">
+              <h3 class="tittle"> <span>Resumen de compra</span> </h3>
+              <div class="cat">
+                  <h4 class="tittle-item"> Categoria: </h4>
+                  <h4 id="categoriaComprador"></h4>
+
+              </div>
+              <div class="cant">
+                  <h4 class="tittle-item">Cantidad</h4>
+                  <h4 id="cantidadIngresada"></h4>
+              </div>
+
+              <div class="sinDscto">
+                  <h4 class="tittle-item">Precio sin descuento</h4>
+                  <h4 id="totalSDscto"></h4>
+              </div>
+
+              <div class="conDscto">
+                  <h4 class="tittle-item">Descuento</h4>
+                  <h4 id="totalPagoConDescuento"></h4>
+              </div>
+
+              <div id="divTotalPago" class="totalPago">
+                  <h4 class="tittle-item">Total a pagar</h4>
+                  <h4 id="totalPagoResumen"></h4>
+              </div>
+
+          </div>
+
+          <div class="btsForm">
+              <button type="button" class="normal bg-green form" id="borrarForm"> Borrar</button>
+
+              <button type="button" class="normal bg-green form" id="resumenPago"> Resumen</button>
+              <div id="resultado" class="totalPago" style="display: none;">
+        <h4 class="tittle-item">Resultado de la compra:</h4>
+        <h4 id="resultadoCompra"></h4>
+    </div>
+
+
+      </form>
+
+
+  </section>
+</main>
+
+  <footer class="footer">
+    <ul class="d-flex d-flex justify-content-evenly nav">
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Preguntas frecuentes</a>
+        </li>
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Contactanos</a>
+        </li>
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Prensa</a>
+        </li>
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Conferencias</a>
+        </li>
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Terminos y condiciones</a>
+        </li>
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Privacidad</a>
+        </li>
+        <li class="nav-item footer-li">
+            <a class="texto-blanco nav-link footer-link" href="#">Estudiantes</a>
+        </li>
+    </ul>
+</footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
